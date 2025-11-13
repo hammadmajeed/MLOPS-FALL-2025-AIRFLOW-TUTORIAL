@@ -23,7 +23,7 @@ with DAG(
     'weather_etl',
     default_args=default_args,
     description='A simple weather ETL DAG',
-    schedule='@daily',
+    schedule_interval='*/15 * * * *',
     catchup=False,
     tags=["weather", "ETL"]
 ) as dag:

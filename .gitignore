@@ -5,3 +5,4 @@ example_03_parallel_execution.py
 example_04_branching.py
 example_05_task_groups.py
 example_06_error_handling.py
+logs/
