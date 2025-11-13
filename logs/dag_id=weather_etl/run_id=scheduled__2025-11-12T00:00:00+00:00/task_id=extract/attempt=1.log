@@ -1,0 +1,19 @@
+[2025-11-13T03:03:31.393+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-13T03:03:31.407+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl.extract scheduled__2025-11-12T00:00:00+00:00 [queued]>
+[2025-11-13T03:03:31.411+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl.extract scheduled__2025-11-12T00:00:00+00:00 [queued]>
+[2025-11-13T03:03:31.411+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-11-13T03:03:31.420+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2025-11-12 00:00:00+00:00
+[2025-11-13T03:03:31.430+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_etl', 'extract', 'scheduled__2025-11-12T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpuz8u1u3k']
+[2025-11-13T03:03:31.434+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask extract
+[2025-11-13T03:03:31.434+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=219) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-13T03:03:31.434+0000] {standard_task_runner.py:72} INFO - Started process 222 to run task
+[2025-11-13T03:03:31.486+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_etl.extract scheduled__2025-11-12T00:00:00+00:00 [running]> on host 3e77b7896dd7
+[2025-11-13T03:03:31.551+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_etl' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-11-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-12T00:00:00+00:00'
+[2025-11-13T03:03:31.552+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-13T03:03:31.554+0000] {base.py:84} INFO - Retrieving connection 'open_meteo_api'
+[2025-11-13T03:03:32.277+0000] {python.py:240} INFO - Done. Returned value was: {'latitude': 33.625, 'longitude': 73.25, 'generationtime_ms': 0.06830692291259766, 'utc_offset_seconds': 0, 'timezone': 'GMT', 'timezone_abbreviation': 'GMT', 'elevation': 610.0, 'current_weather_units': {'time': 'iso8601', 'interval': 'seconds', 'temperature': '°C', 'windspeed': 'km/h', 'winddirection': '°', 'is_day': '', 'weathercode': 'wmo code'}, 'current_weather': {'time': '2025-11-13T03:00', 'interval': 900, 'temperature': 11.9, 'windspeed': 3.4, 'winddirection': 18, 'is_day': 1, 'weathercode': 0}}
+[2025-11-13T03:03:32.340+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-13T03:03:32.340+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_etl, task_id=extract, run_id=scheduled__2025-11-12T00:00:00+00:00, execution_date=20251112T000000, start_date=20251113T030331, end_date=20251113T030332
+[2025-11-13T03:03:32.417+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-13T03:03:32.445+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-13T03:03:32.470+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

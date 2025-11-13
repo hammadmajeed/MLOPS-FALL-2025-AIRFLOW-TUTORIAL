@@ -1,0 +1,22 @@
+[2025-11-13T03:33:05.699+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-13T03:33:05.710+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_01_basic_sequential.process manual__2025-11-13T03:33:03.971309+00:00 [queued]>
+[2025-11-13T03:33:05.713+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_01_basic_sequential.process manual__2025-11-13T03:33:03.971309+00:00 [queued]>
+[2025-11-13T03:33:05.713+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-11-13T03:33:05.795+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): process> on 2025-11-13 03:33:03.971309+00:00
+[2025-11-13T03:33:05.807+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_01_basic_sequential', 'process', 'manual__2025-11-13T03:33:03.971309+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/example_01_basic_sequential.py', '--cfg-path', '/tmp/tmpsotbecmh']
+[2025-11-13T03:33:05.811+0000] {standard_task_runner.py:105} INFO - Job 50: Subtask process
+[2025-11-13T03:33:05.816+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=224) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-13T03:33:05.817+0000] {standard_task_runner.py:72} INFO - Started process 225 to run task
+[2025-11-13T03:33:05.862+0000] {task_command.py:467} INFO - Running <TaskInstance: example_01_basic_sequential.process manual__2025-11-13T03:33:03.971309+00:00 [running]> on host 97e70089e63a
+[2025-11-13T03:33:05.907+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_01_basic_sequential' AIRFLOW_CTX_TASK_ID='process' AIRFLOW_CTX_EXECUTION_DATE='2025-11-13T03:33:03.971309+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-13T03:33:03.971309+00:00'
+[2025-11-13T03:33:05.908+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-13T03:33:05.916+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-11-13T03:33:05.916+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Processing data..." && sleep 2']
+[2025-11-13T03:33:05.925+0000] {subprocess.py:99} INFO - Output:
+[2025-11-13T03:33:05.927+0000] {subprocess.py:106} INFO - Processing data...
+[2025-11-13T03:33:07.945+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-11-13T03:33:08.021+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-13T03:33:08.022+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_01_basic_sequential, task_id=process, run_id=manual__2025-11-13T03:33:03.971309+00:00, execution_date=20251113T033303, start_date=20251113T033305, end_date=20251113T033308
+[2025-11-13T03:33:08.091+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-13T03:33:08.107+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-13T03:33:08.111+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

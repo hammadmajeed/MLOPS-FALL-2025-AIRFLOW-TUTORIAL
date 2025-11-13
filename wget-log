@@ -1,0 +1,6 @@
+--2025-05-03 16:36:33--  https://api.open-meteo.com/v1/forecast?latitude=33.738045
+Resolving api.open-meteo.com (api.open-meteo.com)... 94.130.142.35, 2a01:4f8:13b:2e04::2
+Connecting to api.open-meteo.com (api.open-meteo.com)|94.130.142.35|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2025-05-03 16:36:34 ERROR 400: Bad Request.
+
