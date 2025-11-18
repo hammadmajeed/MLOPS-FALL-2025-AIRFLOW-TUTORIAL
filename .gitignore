@@ -6,3 +6,5 @@ example_04_branching.py
 example_05_task_groups.py
 example_06_error_handling.py
 logs/
+sales_api.py
+daily_sales_etl.py
